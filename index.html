@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three.js Animation</title>
+    <title>Flight Simulator</title>
     <style>
         body { margin: 0; }
         canvas { display: block; }
     </style>
 </head>
 <body>
-    <!-- Load Three.js and PapaParse libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Load the Three.js library -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.167.1/build/three.module.js",
+          "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.167.1/examples/jsm/"
+        }
+      }
+    </script>
+
+    <!-- Load PapaParse library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-
-   
-
     
-    <!-- Link to your JavaScript file -->
-    <script src="main.js"></script>
+    <!-- Link to your main JavaScript file -->
+    <script type="module" src="main.js"></script>
 </body>
 </html>
